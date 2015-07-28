@@ -19,7 +19,7 @@
 					<p> Benutername: 	<input name="ebenutzername" type="text" size="20" /> </p>
 					<p> Kennwort:		<input name="ekennwort" type="password" size="20"/> </p>
 					<input name="Submit" type="submit" value="Einloggen"/>
-					<input name="Registrieren>
+					<input name="Submit" type="submit" value="Registrieren">
 				</form>
 			</div>
 		</div>

@@ -3,7 +3,9 @@
 	<head>
 	</head>
 	<body>
+	//if abfrage, ob einloggen aktiviert oder registrieren
 		<h1>
+		
 			Anmeldung erfolgreich!
 		</h1>
 		<?php
