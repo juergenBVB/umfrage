@@ -30,7 +30,8 @@ include 'datenbankconnect.php';
 	while ($row = mysqli_fetch_assoc($result))	
 	{
 		print ($row ["mnr"]);
-	}
+		
+	} 
 	mysqli_close($con);
 	
 	?>
