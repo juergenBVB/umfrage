@@ -1,3 +1,6 @@
+/* checken ob beide Felder befüllt, ob Benutzername belegt, kennwortlänge lang genug,
+ aber nicht zu lange */
+
 <?php session_start(); 
 include 'datenbankconnect.php';?>
 
