@@ -1,0 +1,11 @@
+@CHARSET "ISO-8859-1";
+
+td, th {
+	padding: 8px 8px 8px 8px;
+	vertical-align: middle;
+	
+}
+
+form {
+	margin-bottom: 0;
+}
