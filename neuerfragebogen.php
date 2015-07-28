@@ -44,7 +44,7 @@ elseif ($_GET['action'] == 2){
 		mysqli_query($con, "INSERT INTO frage (fname, titel) VALUES ('$frage', '".$_SESSION['fragebogen']."')");	
 		
 	}	
-	echo "<br><a href='neuerfragebogen.php?action=0'>Zurück zur Übersicht</>";
+	echo "<br><a href='erfasserubersicht.php'>Zurück zur Übersicht</>";
 }
 ?>
 
