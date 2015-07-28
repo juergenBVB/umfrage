@@ -1,7 +1,4 @@
-<?php 
-include 'datenbankconnect.php';
 
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,17 +22,7 @@ include 'datenbankconnect.php';
 		<input type="submit" name="anmeldung_mnr" = "anmelden"> <br>
 		
 		
-	<?php 
-	$result = mysqli_query($con, "SELECT mnr from student");
-		
-	
-	while ($row = mysqli_fetch_assoc($result))	
-	{
-		print ($row ["mnr"]);
-	}
-	mysqli_close($con);
-	
-	?>
+
 	
 	
 	<h3>Die alternative Anmeldung für Erfasser ist unter folgendem Link zu finden</h3>
