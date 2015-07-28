@@ -1,3 +1,7 @@
+<?php 
+include 'datenbankconnect.php';
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,11 +14,28 @@
 	
 	<h2>Bitte Anmelden via Matrikelnummer</h2>
 	<form action="fragebogenuebersicht.php" method="post">
+	
+
+	
+	
+	
+	<!-- Hier fehlt Gegenprüfung ob MNR vorhanden -> JA-> fragebogenuebersicht.php ; NEIN -> mnrnichtvorhanden.php -->
+	
 		Deine Matrikelnummer <input name="mnr_student" type="text" size="40" maxlength="30" > <br>
 		<input type="submit" name="anmeldung_mnr" = "anmelden"> <br>
 		
 		
+	<?php 
+	$result = mysqli_query($con, "SELECT mnr from student");
+		
 	
+	while ($row = mysqli_fetch_assoc($result))	
+	{
+		print ($row ["mnr"]);
+	}
+	mysqli_close($con);
+	
+	?>
 	
 	
 	<h3>Die alternative Anmeldung fÃ¼r Erfasser ist unter folgendem Link zu finden</h3>
