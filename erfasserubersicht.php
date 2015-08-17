@@ -11,13 +11,14 @@ session_start();
 
 <a href="neuerfragebogen.php">Neuer Fragebogen</a>
 <br><br>
-<table border="1" rules="">
+<table border="1">
   <tr>
     <th>Fragebogentitel</th>
     <th>bearbeiten</th>
     <th>kopieren</th>
     <th>auswerten</th>
     <th>bearbeitende Kurse</th>
+<!--<th><img alt="Bild" src="bild.png"></th>-->
     
   </tr>
   
