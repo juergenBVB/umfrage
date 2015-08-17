@@ -19,8 +19,15 @@ include 'datenbankconnect.php';
 			$sqlresult =
 				mysqli_query($con, "Select kennwort From erfasser where benutzername='$benutzername';");
 			
+			if (mysqli_num_rows($sqlresult)==0){
+				echo '<h1>Registrierung fehlgeschlagen</h1> <br> Benutzername nicht vergeben
+				<a href=erfasserlogin.php> <br> <br> <h3>Zurück zum Erfasserlogin</h3></a>';
+			
+			}
+			
 			while ($row = mysqli_fetch_assoc($sqlresult))
 			{
+				
 				if ($row['kennwort']==$kennwort){
 					echo '<h1> Benutzeranmeldung erfolgreich. </h1>
 					<a href=erfasserubersicht.php> <br> <br> <h3>Zur Erfasserübersicht</h3></a>';
