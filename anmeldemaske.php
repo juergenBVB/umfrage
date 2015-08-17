@@ -29,7 +29,7 @@
 	<a href=erfasserlogin.php>Erfasserlogin</a>
 	
 	<h3>Zum Admin-Bereich gelangen Sie hier</h3> 
-	<a href=linkuebersicht.php>Erfasserlogin</a>
+	<a href=linkuebersicht.php>Admin</a>
 
 </form>
 </body>
