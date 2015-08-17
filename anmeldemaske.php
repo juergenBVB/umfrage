@@ -10,7 +10,7 @@
 	<h1> Anmeldung Student</h1>
 	
 	<h2>Bitte Anmelden via Matrikelnummer</h2>
-	<form action="fragebogenuebersicht.php" method="post">
+	<form action="gegencheckmnranmeldung.php" method="post">
 	
 
 	

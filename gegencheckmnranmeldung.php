@@ -23,13 +23,14 @@ include 'datenbankconnect.php';
 	
 	
 	
-	<?php 
-	$result = mysqli_query($con, "SELECT mnr from student");
+	<?php
+	$mnr = $_POST['mnr_student']; 
+	$result = mysqli_query($con, "SELECT mnr from student where mnr='student.mnr');
 		
 	
 	while ($row = mysqli_fetch_assoc($result))	
 	{
-		print ($row ["mnr"]);
+		;
 		
 	} 
 	mysqli_close($con);
