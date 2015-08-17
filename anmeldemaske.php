@@ -26,7 +26,10 @@
 	
 	
 	<h3>Die alternative Anmeldung für Erfasser ist unter folgendem Link zu finden</h3>
-	<a href=erfasserlogin.php>Erfasserlogin</a> 
+	<a href=erfasserlogin.php>Erfasserlogin</a>
+	
+	<h3>Zum Admin-Bereich gelangen Sie hier</h3> 
+	<a href=linkuebersicht.php>Erfasserlogin</a>
 
 </form>
 </body>
