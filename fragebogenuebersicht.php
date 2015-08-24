@@ -1,3 +1,6 @@
+<?php session_start(); 
+include 'datenbankconnect.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
