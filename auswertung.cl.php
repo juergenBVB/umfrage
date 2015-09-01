@@ -75,7 +75,7 @@ class Auswertung {
 	}
 	
 	public function getKommentare(){
-		$sql = mysqli_query($this->con, "SELECT kommentar WHERE titel = '$this->titel'");
+		$sql = mysqli_query($this->con, "SELECT kommentar FROM kommentar WHERE titel = '$this->titel'");
 		while ($row = mysqli_fetch_assoc($sql)){
 			$result = $result.$row['kommentar']."<br>";
 		}

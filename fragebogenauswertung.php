@@ -27,19 +27,29 @@ include 'auswertung.cl.php';
 	}
 	elseif ($_GET['action'] == 1){
 		$auswertung = new Auswertung($_SESSION['fragebogen'], $_POST['kurs']);
+		
+		?>
+		<table border="1"><tr><th>Frage</th><th>Durchschnitt</th><th>Minimum</th><th>Maximum</th><th>Standardabweichung</th></tr>
+		<?php 
+		
 		foreach($auswertung->auswertung as $key => $value){
 			
 			$sql = mysqli_query($con, "SELECT fname FROM frage WHERE fid='$key'");
 			if ($row = mysqli_fetch_assoc($sql)){
-				echo "Frage: ".$row['fname']."<br>";
+				echo "<tr><td>".$row['fname']."</td>";
 			}
 			
 			
-			echo "Durchschnitt: ".$value[0]."<br>";
-			echo "Minimum: ".$value[1]."<br>";
-			echo "Maximum: ".$value[2]."<br>";
-			echo "Standardabweichung: ".$value[3]."<br><br>";
+			echo "<td>".$value[0]."</td>";
+			echo "<td>".$value[1]."</td>";
+			echo "<td>".$value[2]."</td>";
+			echo "<td>".$value[3]."</td>";
 		}
+		?>
+		</table>
+		<br>Kommentare: <br>
+		<?php 
+		echo $auswertung->getKommentare();
 	}
 	
 	
