@@ -24,6 +24,13 @@ include 'datenbankconnect.php';
 						 angemeldet als Student: ' . $mnr . '</h2>';
 				echo '<h2>Fragebogenauswahl</h2>'; 
 			
+			if ($_POST['button']=="Speichern")	{
+				$sql2=mysqli_query($con, "Insert into kommentar 
+						values ('$mnr', '".$_SESSION['fragebogentitel']."', '".$_POST['kommentarfeld']."')");
+				$sql3=mysqli_query($con, "Insert into speichert
+						values ('$mnr', '".$_SESSION['fragebogentitel']."')");
+			}
+				
 			?>
 			<table border="1">
 			<tr>
@@ -32,9 +39,6 @@ include 'datenbankconnect.php';
 				</td>
 				<td>
 				Anzahl Fragen
-				</td>
-				<td>
-				Kommentar
 				</td>
 				<td>
 				Bearbeiten
@@ -56,7 +60,6 @@ include 'datenbankconnect.php';
 				<tr style="valign: middle;"> 
 				<td><?php echo $row['titel'];?></td>
 				<td><?php echo $row['anzahl_fragen'];?></td>
-				<td><?php echo $row['kommentar'];?></td>
 				<td> <form action="fragebogenausfuellen.php" method="post">
 						<input type="hidden" name="fragebogentitel" value="<?php echo $row['titel'];?>">
 						<input name="buttons" type="submit" value="Bearbeiten"/>
