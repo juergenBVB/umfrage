@@ -1,5 +1,4 @@
 <?php
-include 'datenbankconnect.php';
 class Auswertung {
 	public $titel;
 	public $kurs;
