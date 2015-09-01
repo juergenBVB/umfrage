@@ -45,9 +45,8 @@ include 'datenbankconnect.php';
 				</td>
 			</tr>
 			<?php 
-			$sql=mysqli_query($con, "SELECT dfb.titel, Count( * ) AS anzahl_fragen, kommentar
+			$sql=mysqli_query($con, "SELECT dfb.titel, Count(f.fid) AS anzahl_fragen
 									FROM darfbearbeiten dfb, student s, frage f
-									LEFT JOIN kommentar k ON k.titel = f.titel
 									WHERE dfb.kname = s.kname
 									AND f.titel = dfb.titel
 									AND s.mnr = '$mnr'
