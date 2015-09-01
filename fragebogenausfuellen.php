@@ -51,7 +51,8 @@ if(!isset($fid))
 								FROM frage f, darfbearbeiten dbf, Student s
 								WHERE f.titel = dbf.titel
 								AND s.kname = dbf.kname
-								AND s.mnr = '$mnr' and f.titel='$titel'");
+								AND s.mnr = '$mnr' and f.titel='$titel'
+								ORDER BY f.fid");
 		}
 		else 
 		{
@@ -59,7 +60,8 @@ if(!isset($fid))
 					FROM frage f, darfbearbeiten dbf, Student s
 					WHERE f.titel = dbf.titel
 					AND s.kname = dbf.kname AND f.fid='$fid'
-					AND s.mnr = '$mnr' and f.titel='$titel'");
+					AND s.mnr = '$mnr' and f.titel='$titel'
+					order by f.fid");
 		}
 		$row = mysqli_fetch_assoc($sql);
 		
