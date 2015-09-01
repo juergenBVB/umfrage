@@ -33,14 +33,20 @@ class Auswertung {
 		
 		while ($row = mysqli_fetch_assoc($sql)){
 			//  "MNR: ".$row['mnr']."<br>";
-			$sql2 = mysqli_query($this->con, "SELECT fid, skalenwert FROM beantwortet WHERE mnr = '".$row['mnr']."'");
 			
+			$sql3 = mysqli_query($this->con, "SELECT fid FROM frage WHERE titel = '$this->titel'");
+			while ($row3 = mysqli_fetch_assoc($sql3)){
 			
-			while ($row2 = mysqli_fetch_assoc($sql2)){
-				//echo "FID: ".$row2['fid']."<br>";
-				//echo "Skalenwert: ".$row2['skalenwert']."<br>";
-				$frageid = $row2['fid'];
-				$frage[$frageid][] = $row2['skalenwert'];
+				$sql2 = mysqli_query($this->con, "SELECT skalenwert FROM beantwortet WHERE mnr = '".$row['mnr']."' 
+						AND fid = '".$row3['fid']."'");
+				
+				
+				while ($row2 = mysqli_fetch_assoc($sql2)){
+					//echo "FID: ".$row2['fid']."<br>";
+					//echo "Skalenwert: ".$row2['skalenwert']."<br>";
+					$frageid = $row3['fid'];
+					$frage[$frageid][] = $row2['skalenwert'];
+				}
 			}
 		}
 		
