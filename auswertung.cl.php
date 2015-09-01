@@ -29,7 +29,9 @@ class Auswertung {
 		//Fragen abfragen
 		$frage = array();		
 		
-		$sql = mysqli_query($this->con, "SELECT mnr FROM speichert WHERE titel = '$this->titel'");	
+		$sql = mysqli_query($this->con, "SELECT sp.mnr FROM speichert sp, student st WHERE sp.mnr = st.mnr 
+																							AND st.kname = '$this->kurs' AND
+																						 sp.titel = '$this->titel'");	
 		
 		while ($row = mysqli_fetch_assoc($sql)){
 			//  "MNR: ".$row['mnr']."<br>";
